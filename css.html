@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 외부 CSS 파일 사용 시 -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" -->
+    <style>
+      /* p *: p요소에 있는 모든 하위 요소에 적용 */
+      p * {
+        /* font-family: 글꼴1, 글꼴2, 글꼴3*/
+        font-family: "Courier New", Courier, monospace;
+        color: brown;
+        font-style: italic;
+      }
+      /* .: 클래스 선택자 */
+      /* 복수 클래스 사용 */
+      .webp {
+        background-color: black;
+      }
+
+      /* h1요소의 intro 클래스는 아래 스타일 적용 */
+      h1.intro {
+        color: tomato;
+        text-decoration: overline;
+      }
+
+      /* h1요소의 outro 클래스는 아래 스타일 적용 */
+      h1.outro {
+        color: tan;
+        text-decoration: underline;
+      }
+
+      /* #: ID 선택자 */
+      #mt {
+        text-decoration: line-through;
+      }
+
+      /* 연결 선택자: 부모요소 (>) 하위요소 
+      ex) div p 하위 선택 vs div > p 자식 선택 */
+      div p {
+        font-weight: bold;
+      }
+
+      /* 속성 선택자: 요소[속성=값] */
+      /* alt 속성 전체img[alt]{
+         color:red;
+        } */
+
+      img[alt="N/A"] {
+        color: red;
+      }
+      /* 반응 선택자: 사용자의 동작에 반응하는 가상 클래스 */
+      a:link {
+        color: hotpink;
+        text-decoration: none;
+      }
+      input:focus {
+        background-color: cyan;
+      }
+      a:hover {
+        background-color: hotpink;
+        color: white;
+      }
+      /* 구조 선택자 
+      1) 순서 중심 구조 선택자 */
+      ul li:first-child {
+        text-decoration: line-through red double;
+      }
+      ul li:nth-child(2n) {
+        text-decoration: line-through red double;
+      }
+      /* 2) 요소(타입) 중심 구조 선택자  */
+      ul li:nth-of-type(2n) {
+        text-decoration: line-through orange double;
+      }
+
+      table tr:nth-of-type(2n-1) td:nth-of-type(2n-1) {
+        background-color: skyblue;
+        font-weight: bold;
+      }
+      table tr:nth-of-type(2n-1) td:nth-of-type(2n) {
+        background-color: yellow;
+        font-weight: bold;
+      }
+      table tr:nth-of-type(2n) td:nth-of-type(2n-1) {
+        background-color: yellow;
+        font-weight: bold;
+      }
+      table tr:nth-of-type(2n) td:nth-of-type(2n) {
+        background-color: skyblue;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <!-- 인라인 스타일 inline: HTML 요소 안에 스타일 지정 -->
+      <!-- 적용에 우선순위 존재.웹만 보라. 프로그래밍은 민트 -->
+      <h1 class="webp intro">Hello, World!</h1>
+      <p id="mt">
+        <span style="color: blueviolet">웹</span>
+        <span> int main()</span>
+        프로그래밍
+        <!-- 프로그래밍은 p요소의 내용이지 하위 요소가 x. -->
+      </p>
+      <a href="#1">Seoultech</a>
+      <input type="text" />
+      <ul>
+        <p>Test</p>
+        <li><p>wow1</p></li>
+        <li><p>wow2</p></li>
+        <li><p>wow3</p></li>
+        <li><p>wow4</p></li>
+        <li><p>wow5</p></li>
+        <!-- <li><img alt="Loading..." /></li>
+        <li><img alt="N/A" /></li> -->
+      </ul>
+
+      <table border>
+        <tr>
+          <td>제목1</td>
+          <td>내용1</td>
+          <td>제목2</td>
+          <td>내용2</td>
+        </tr>
+        <tr>
+          <td>제목3</td>
+          <td>내용3</td>
+          <td>제목4</td>
+          <td>내용4</td>
+        </tr>
+        <tr>
+          <td>제목5</td>
+          <td>내용5</td>
+          <td>제목6</td>
+          <td>내용6</td>
+        </tr>
+        <tr>
+          <td>제목7</td>
+          <td>내용7</td>
+          <td>제목8</td>
+          <td>내용8</td>
+        </tr>
+      </table>
+
+      <h1 class="webp outro">Bye, World!</h1>
+    </div>
+  </body>
+</html>
