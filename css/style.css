@@ -1,0 +1,11 @@
+h1{
+    /* font-family: 글꼴1, 글꼴2, 글꼴3*/
+    font-family:'Courier New', Courier, monospace;
+    color:hotpink;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+p{
+    color:cyan;
+}
